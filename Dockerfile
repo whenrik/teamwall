@@ -38,6 +38,7 @@ RUN export LEIN_ROOT=yes && bower install --allow-root
 EXPOSE 3000
 
 #CMD [ "~/bin/lein", "run"]
+
 COPY teamwall.sh /data/teamwall-develop/teamwall.sh
 RUN chmod u+x /data/teamwall-develop/teamwall.sh
-CMD [ "./teamwall.sh",]
+CMD [ "/bin/bash", "./teamwall.sh"]
